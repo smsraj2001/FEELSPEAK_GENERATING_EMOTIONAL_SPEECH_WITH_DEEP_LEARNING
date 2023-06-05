@@ -1,0 +1,13 @@
+import speech_recognition as sr
+
+# Load audio file
+audio_file = sr.AudioFile('audio_file.wav')
+
+# Initialize recognizer
+r = sr.Recognizer()
+
+# Perform speech recognition on each segment of speech
+with audio_file as source:
+    for segment in r.record(source, duration=10):
+        text = r.recognize_google(segment)
+        print(text)

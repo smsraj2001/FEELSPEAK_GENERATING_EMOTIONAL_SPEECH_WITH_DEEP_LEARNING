@@ -1,0 +1,8 @@
+from pydub import AudioSegment
+from pydub.silence import split_on_silence
+
+# Load audio file
+audio_file = AudioSegment.from_wav('audio_file.wav')
+
+# Split audio file into segments of speech
+segments = split_on_silence(audio_file, min_silence_len=1000, silence_thresh=-50)

@@ -1,0 +1,8 @@
+import librosa
+
+# Load audio file
+y, sr = librosa.load('audio_file.wav')
+
+# Extract pitch and tempo features
+pitch, _ = librosa.pitch_tuning(y=y, sr=sr)
+tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
