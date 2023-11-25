@@ -1,0 +1,49 @@
+pip install -r requirements.txt
+curl https://data.keithito.com/data/speech/tacotron-20180906.tar.gz | tar xzC /tmp
+python3 demo_server.py --checkpoint /tmp/tacotron-20180906/model.ckpt
+
+python3 preprocess.py --dataset ljspeech
+python3 train.py
+python3.5 train.py --restore_step step_no
+python3 eval.py --checkpoint ~/tacotron/logs-tacotron/model.ckpt-185000
+tensorboard --logdir logs-tacotron
+
+--------------------------------------------------------------------------------------
+HAPPY
+Ha Ha, this joke is so funny to laugh
+I am happy to work on this project
+What a blissful day! Good morning
+Waaaaw!, this car is amazing!
+
+--------------------------------------------------------------------------------------
+SAD
+Alas, I lost all my project data due to a technical glitch with tacotron
+Oh, I feel grieved depressed about the mournful incident
+I am sad to work on this project
+In sooth I know not why I am so melancholic
+I felt that I breathed an atmosphere of sorrow.
+
+--------------------------------------------------------------------------------------
+ANGRY
+It's frustating how unreliable the results are . It's making me so angry! 
+I am angry to work on this project
+Damn, He is a hopeless guy 
+This show is frustating and irritating to watch
+The bear was ravenous, he was fierce and furious
+
+--------------------------------------------------------------------------------------
+NEUTRAL
+
+He is chasing the butterflies
+I am working on this project
+
+--------------------------------------------------------------------------------------
+joy
+I'm so excited to go on vacation next week.
+
+
+sadness:
+My pet died today.
+
+angry:
+ I'm so angry at my boss for yelling at me.
