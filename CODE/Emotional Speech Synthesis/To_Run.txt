@@ -14,6 +14,7 @@ Ha Ha, this joke is so funny to laugh
 I am happy to work on this project
 What a blissful day! Good morning
 Waaaaw!, this car is amazing!
+I'm so excited to go on vacation next week.
 
 --------------------------------------------------------------------------------------
 SAD
@@ -22,6 +23,7 @@ Oh, I feel grieved depressed about the mournful incident
 I am sad to work on this project
 In sooth I know not why I am so melancholic
 I felt that I breathed an atmosphere of sorrow.
+My pet died today.
 
 --------------------------------------------------------------------------------------
 ANGRY
@@ -30,6 +32,7 @@ I am angry to work on this project
 Damn, He is a hopeless guy 
 This show is frustating and irritating to watch
 The bear was ravenous, he was fierce and furious
+I'm so angry at my boss for yelling at me.
 
 --------------------------------------------------------------------------------------
 NEUTRAL
@@ -38,12 +41,7 @@ He is chasing the butterflies
 I am working on this project
 
 --------------------------------------------------------------------------------------
-joy
-I'm so excited to go on vacation next week.
+FOR TESTING EMOTIONAL SPEECH
 
-
-sadness:
-My pet died today.
-
-angry:
- I'm so angry at my boss for yelling at me.
+python3 examples/OpenVokaWavMean.py Sad/2.wav
+--------------------------------------------------------------------------------------
