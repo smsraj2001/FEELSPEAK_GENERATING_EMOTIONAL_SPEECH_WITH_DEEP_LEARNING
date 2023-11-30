@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------------------------------
+VENV
+---------------------------------------
+virtualenv my_name
+virtualenv -p /usr/bin/python3 virtualenv_name
+source virtualenv_name/bin/activate
+
+-------------------------------------------------------------------------------------------------------
+PYENV
+---------------------------------------
+Install:-
+
+sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev \
+libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl \
+git
+
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+
+pyenv install -l
+
+pyenv install [PYTHON_VERSION]
+export PYENV_VERSION=[PYTHON_VERSION]
+exec bash
+
+pyenv versions
+
+pyenv local [PYTHON_VERSION]
+
+python3.5 -m pip install --upgrade pip # If required
+
+python3.5 -m pip install -r requirements.txt
+---------------------------------------
+Uninstall:-
+
+rm -rf $(pyenv root) 
+
+-------------------------------------------------------------------------------------------------------
+conda config --set auto_activate_base false
+
+
